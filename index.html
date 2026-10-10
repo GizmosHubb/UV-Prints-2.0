@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIZMOSHUBB UV Print Catalog</title>
+<style>
+:root{
+  --bg:#0d0f12; --panel:#15181d; --panel2:#1c2027; --line:#272c35;
+  --txt:#eef1f5; --dim:#99a2af; --accent:#f5b301;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+     -webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+header{position:sticky;top:0;z-index:50;background:rgba(13,15,18,.94);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1500px;margin:0 auto;padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.brand{font-weight:900;font-size:20px;letter-spacing:.14em;color:var(--accent);white-space:nowrap}
+.brand small{display:block;font-size:10px;letter-spacing:.22em;color:var(--dim);font-weight:700;margin-top:2px}
+.spacer{flex:1 1 auto}
+.search{flex:1 1 180px;max-width:260px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--txt);border-radius:9px;padding:9px 12px;font-size:14px;outline:none}
+.search:focus{border-color:var(--accent)}
+.search::placeholder{color:#6b7482}
+
+.tabs{max-width:1500px;margin:0 auto;padding:0 16px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tab{background:var(--panel2);border:1px solid var(--line);color:var(--dim);padding:8px 16px;
+  border-radius:999px;cursor:pointer;font-weight:700;font-size:13px;letter-spacing:.06em;transition:.15s}
+.tab:hover{color:var(--txt);border-color:#3a414e}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#1a1205}
+.tab .c{opacity:.65;font-weight:600;margin-left:6px}
+.pdf{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.pdf a{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--line);
+  color:var(--dim);text-decoration:none;padding:8px 13px;border-radius:9px;font-size:12.5px;font-weight:700}
+.pdf a:hover{color:var(--accent);border-color:var(--accent)}
+
+main{max-width:1500px;margin:0 auto;padding:18px 16px 70px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  cursor:zoom-in;transition:.18s;position:relative}
+.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.ph{position:relative;background:#fff;display:flex;align-items:center;justify-content:center;
+  aspect-ratio:3/4;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:contain}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 11px;
+  border-top:1px solid var(--line);font-size:12px}
+.meta b{font-weight:800;letter-spacing:.03em}
+.meta span{color:var(--dim);font-size:10.5px;letter-spacing:.1em;font-weight:700}
+.empty{color:var(--dim);text-align:center;padding:70px 10px;font-size:15px}
+
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,7,9,.97);display:none;
+  align-items:center;justify-content:center;padding:58px 16px 70px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;background:#fff}
+.lbtop{position:absolute;top:0;left:0;right:0;padding:14px 18px;display:flex;align-items:center;
+  gap:14px;color:var(--txt);font-size:13px}
+.lbtop b{color:var(--accent);font-size:15px;letter-spacing:.05em}
+.lbtop .cnt{color:var(--dim)}
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.07);
+  border:1px solid var(--line);color:#fff;width:46px;height:60px;border-radius:10px;cursor:pointer;
+  font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center}
+.nav:hover{background:var(--accent);color:#1a1205;border-color:var(--accent)}
+.prev{left:12px}.next{right:12px}
+.x{margin-left:auto;background:none;border:1px solid var(--line);color:var(--dim);width:34px;height:34px;
+  border-radius:8px;cursor:pointer;font-size:17px;line-height:1}
+.x:hover{color:#fff;border-color:#fff}
+.hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#5f6775;font-size:11px;letter-spacing:.1em}
+
+footer{border-top:1px solid var(--line);padding:22px 16px;text-align:center;color:#5f6775;font-size:11.5px;letter-spacing:.09em}
+@media(max-width:560px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+  .nav{width:38px;height:52px}.lb{padding:52px 8px 60px}
+  .pdf{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">GIZMOSHUBB<small>UV PRINT CATALOG</small></div>
+    <div class="spacer"></div>
+    <input class="search" id="q" type="search" placeholder="Search design no&hellip;" autocomplete="off">
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-k="ALL">ALL<span class="c" id="cALL"></span></button>
+    <button class="tab" data-k="X">PRINT X<span class="c" id="cX"></span></button>
+    <button class="tab" data-k="Y">PRINT Y<span class="c" id="cY"></span></button>
+    <button class="tab" data-k="Z">PRINT Z<span class="c" id="cZ"></span></button>
+    <div class="pdf">
+      <a href="../PRINT%20X.pdf" target="_blank">PDF &middot; X</a>
+      <a href="../PRINT%20Y.pdf" target="_blank">PDF &middot; Y</a>
+      <a href="../PRINT%20Z.pdf" target="_blank">PDF &middot; Z</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>No designs match that number.</div>
+</main>
+
+<div class="lb" id="lb">
+  <div class="lbtop">
+    <b id="lbName"></b><span class="cnt" id="lbCnt"></span>
+    <button class="x" id="lbX">&times;</button>
+  </div>
+  <button class="nav prev" id="lbP">&#10094;</button>
+  <img id="lbImg" alt="">
+  <button class="nav next" id="lbN">&#10095;</button>
+  <div class="hint">&larr; &rarr; to browse &middot; ESC to close</div>
+</div>
+
+<footer>GIZMOSHUBB &middot; ALL DESIGNS WATERMARKED &amp; COPYRIGHT PROTECTED</footer>
+
+<script src="data.js"></script>
+<script>
+const grid=document.getElementById('grid'), empty=document.getElementById('empty'),
+      q=document.getElementById('q'), lb=document.getElementById('lb'),
+      lbImg=document.getElementById('lbImg'), lbName=document.getElementById('lbName'),
+      lbCnt=document.getElementById('lbCnt');
+let all=[], view=[], tab='ALL', idx=-1;
+
+(function(){
+  const d=window.CATALOG;
+  if(!d){
+    empty.hidden=false;
+    empty.textContent='Could not load data.js — keep it next to this page.';
+    return;
+  }
+  for(const k of ['X','Y','Z']){
+    (d[k]||[]).forEach(o=>all.push({n:o.n,v:o.v,t:o.t,k:k}));
+    const el=document.getElementById('c'+k); if(el) el.textContent=(d[k]||[]).length;
+  }
+  document.getElementById('cALL').textContent=all.length;
+  render();
+})();
+
+function render(){
+  const term=q.value.trim().toLowerCase();
+  view=all.filter(o=>(tab==='ALL'||o.k===tab)&&(!term||o.n.toLowerCase().includes(term)));
+  grid.innerHTML='';
+  const f=document.createDocumentFragment();
+  view.forEach(function(o,i){
+    const c=document.createElement('div');
+    c.className='card'; c.dataset.i=i;
+    const ph=document.createElement('div'); ph.className='ph';
+    const im=document.createElement('img');
+    im.loading='lazy'; im.decoding='async'; im.src=o.t; im.alt='Design '+o.n;
+    ph.appendChild(im);
+    const me=document.createElement('div'); me.className='meta';
+    const b=document.createElement('b'); b.textContent=o.n;
+    const s=document.createElement('span'); s.textContent='PRINT '+o.k;
+    me.appendChild(b); me.appendChild(s);
+    c.appendChild(ph); c.appendChild(me);
+    f.appendChild(c);
+  });
+  grid.appendChild(f);
+  empty.hidden=view.length>0;
+}
+
+document.getElementById('tabs').addEventListener('click',function(e){
+  const b=e.target.closest('.tab'); if(!b) return;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  b.classList.add('on'); tab=b.dataset.k; render();
+  scrollTo({top:0,behavior:'smooth'});
+});
+q.addEventListener('input',render);
+
+grid.addEventListener('click',function(e){
+  const c=e.target.closest('.card'); if(c) open(+c.dataset.i);
+});
+function open(i){
+  if(i<0||i>=view.length) return;
+  idx=i; const o=view[i];
+  lbImg.src=o.v; lbImg.alt='Design '+o.n;
+  lbName.textContent=o.n+'  ·  PRINT '+o.k;
+  lbCnt.textContent=(i+1)+' / '+view.length;
+  lb.classList.add('on'); document.body.style.overflow='hidden';
+}
+function close(){lb.classList.remove('on');lbImg.removeAttribute('src');document.body.style.overflow='';}
+function step(d){open((idx+d+view.length)%view.length);}
+document.getElementById('lbX').onclick=close;
+document.getElementById('lbP').onclick=function(e){e.stopPropagation();step(-1);};
+document.getElementById('lbN').onclick=function(e){e.stopPropagation();step(1);};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbImg)close();});
+addEventListener('keydown',function(e){
+  if(!lb.classList.contains('on')){
+    if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
+    return;
+  }
+  if(e.key==='Escape')close();
+  else if(e.key==='ArrowRight')step(1);
+  else if(e.key==='ArrowLeft')step(-1);
+});
+let sx=null;
+lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',function(e){
+  if(sx===null)return;
+  const dx=e.changedTouches[0].clientX-sx;
+  if(Math.abs(dx)>50)step(dx<0?1:-1);
+  sx=null;
+},{passive:true});
+document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+</script>
+</body>
+</html>
