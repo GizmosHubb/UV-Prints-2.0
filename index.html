@@ -3,208 +3,228 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIZMOSHUBB UV Print Catalog</title>
+<title>GizmosHubb UV Print Catalogue</title>
+<meta name="description" content="302 premium UV printing designs from GizmosHubb. Browse, search and preview the full catalogue.">
+<meta name="theme-color" content="#0f1b2d">
+<meta property="og:title" content="GizmosHubb UV Print Catalogue">
+<meta property="og:description" content="302 premium UV printing designs.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='900' fill='%23e11d48' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d0f12; --panel:#15181d; --panel2:#1c2027; --line:#272c35;
-  --txt:#eef1f5; --dim:#99a2af; --accent:#f5b301;
+  --navy:#0f1b2d; --navy2:#16263d; --red:#e11d48; --red-d:#be123c; --gold:#d4a017;
+  --bg:#f6f8fb; --card:#ffffff; --ink:#0f1b2d; --muted:#5b6678; --line:#e6eaf0;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--txt);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-     -webkit-font-smoothing:antialiased}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
 
-header{position:sticky;top:0;z-index:50;background:rgba(13,15,18,.94);
-  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.bar{max-width:1500px;margin:0 auto;padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.brand{font-weight:900;font-size:20px;letter-spacing:.14em;color:var(--accent);white-space:nowrap}
-.brand small{display:block;font-size:10px;letter-spacing:.22em;color:var(--dim);font-weight:700;margin-top:2px}
-.spacer{flex:1 1 auto}
-.search{flex:1 1 180px;max-width:260px;background:var(--panel2);border:1px solid var(--line);
-  color:var(--txt);border-radius:9px;padding:9px 12px;font-size:14px;outline:none}
-.search:focus{border-color:var(--accent)}
-.search::placeholder{color:#6b7482}
+/* header */
+.top{position:sticky;top:0;z-index:60;background:var(--navy);box-shadow:0 2px 14px rgba(15,27,45,.25)}
+.top .in{max-width:1320px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
+.logo .mk{width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:20px;color:var(--red);box-shadow:0 0 0 2px rgba(212,160,23,.55)}
+.logo b{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.logo b span{color:var(--gold)}
+.sp{flex:1}
+.count-pill{border:1.5px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:999px;font-weight:700;
+  font-size:13.5px;white-space:nowrap}
 
-.tabs{max-width:1500px;margin:0 auto;padding:0 16px 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.tab{background:var(--panel2);border:1px solid var(--line);color:var(--dim);padding:8px 16px;
-  border-radius:999px;cursor:pointer;font-weight:700;font-size:13px;letter-spacing:.06em;transition:.15s}
-.tab:hover{color:var(--txt);border-color:#3a414e}
-.tab.on{background:var(--accent);border-color:var(--accent);color:#1a1205}
-.tab .c{opacity:.65;font-weight:600;margin-left:6px}
-.pdf{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
-.pdf a{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--line);
-  color:var(--dim);text-decoration:none;padding:8px 13px;border-radius:9px;font-size:12.5px;font-weight:700}
-.pdf a:hover{color:var(--accent);border-color:var(--accent)}
+/* hero */
+.hero{text-align:center;padding:54px 16px 30px;max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.025em;line-height:1.1}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p{color:var(--muted);font-size:clamp(15px,1.8vw,17.5px);margin-top:16px}
+.hero p b{color:var(--red);font-weight:800}
+.stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 22px;min-width:120px;
+  box-shadow:0 1px 3px rgba(15,27,45,.05)}
+.stat b{display:block;font-size:22px;font-weight:900;color:var(--navy)}
+.stat span{font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 
-main{max-width:1500px;margin:0 auto;padding:18px 16px 70px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
-  cursor:zoom-in;transition:.18s;position:relative}
-.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.5)}
-.ph{position:relative;background:#fff;display:flex;align-items:center;justify-content:center;
-  aspect-ratio:3/4;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:contain}
-.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 11px;
-  border-top:1px solid var(--line);font-size:12px}
-.meta b{font-weight:800;letter-spacing:.03em}
-.meta span{color:var(--dim);font-size:10.5px;letter-spacing:.1em;font-weight:700}
-.empty{color:var(--dim);text-align:center;padding:70px 10px;font-size:15px}
+/* toolbar */
+.wrap{max-width:1320px;margin:0 auto;padding:0 16px}
+.bar{position:sticky;top:64px;z-index:50;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);
+  padding:14px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px solid var(--line)}
+.sec{display:flex;align-items:center;gap:12px;margin-right:auto}
+.sec i{width:5px;height:30px;background:var(--red);border-radius:3px}
+.sec h2{font-size:clamp(19px,2.4vw,24px);font-weight:800;letter-spacing:-.01em}
+.tabs{display:flex;gap:7px;flex-wrap:wrap}
+.tab{background:var(--card);border:1.5px solid var(--line);color:var(--muted);padding:8px 15px;border-radius:999px;
+  font-weight:700;font-size:13px;transition:.15s}
+.tab:hover{border-color:var(--navy);color:var(--navy)}
+.tab.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab small{opacity:.6;margin-left:5px;font-weight:600}
+.search{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;
+  color:var(--ink);outline:none;width:200px;max-width:100%}
+.search:focus{border-color:var(--red)}
 
-.lb{position:fixed;inset:0;z-index:100;background:rgba(6,7,9,.97);display:none;
-  align-items:center;justify-content:center;padding:58px 16px 70px}
+/* grid */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));padding:22px 0 70px}
+.card{background:var(--card);border-radius:16px;overflow:hidden;cursor:zoom-in;
+  box-shadow:0 1px 3px rgba(15,27,45,.06),0 1px 2px rgba(15,27,45,.04);transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,27,45,.13)}
+.ph{aspect-ratio:3/4;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border-bottom:1px solid var(--line)}
+.ph img{width:100%;height:100%;object-fit:contain;transition:transform .3s}
+.card:hover .ph img{transform:scale(1.03)}
+.info{padding:13px 15px 15px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.info b{font-size:15px;font-weight:700}
+.tag{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--red);background:#fff1f3;padding:4px 9px;border-radius:999px}
+.empty{text-align:center;color:var(--muted);padding:70px 10px}
+
+/* viewer */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(15,27,45,.96);display:none;align-items:center;justify-content:center;
+  padding:64px 16px 30px}
 .lb.on{display:flex}
-.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;background:#fff}
-.lbtop{position:absolute;top:0;left:0;right:0;padding:14px 18px;display:flex;align-items:center;
-  gap:14px;color:var(--txt);font-size:13px}
-.lbtop b{color:var(--accent);font-size:15px;letter-spacing:.05em}
-.lbtop .cnt{color:var(--dim)}
-.nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.07);
-  border:1px solid var(--line);color:#fff;width:46px;height:60px;border-radius:10px;cursor:pointer;
-  font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center}
-.nav:hover{background:var(--accent);color:#1a1205;border-color:var(--accent)}
-.prev{left:12px}.next{right:12px}
-.x{margin-left:auto;background:none;border:1px solid var(--line);color:var(--dim);width:34px;height:34px;
-  border-radius:8px;cursor:pointer;font-size:17px;line-height:1}
-.x:hover{color:#fff;border-color:#fff}
-.hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#5f6775;font-size:11px;letter-spacing:.1em}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.lbt{position:absolute;top:0;left:0;right:0;padding:14px 18px;display:flex;align-items:center;gap:14px;color:#fff}
+.lbt b{font-size:16px;font-weight:800}
+.lbt .c{color:#9fb0c8;font-size:13px}
+.lbt .tag{background:var(--red);color:#fff}
+.x{margin-left:auto;width:38px;height:38px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:19px}
+.x:hover{border-color:var(--gold);color:var(--gold)}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;
+  background:#fff;color:var(--navy);font-size:20px;font-weight:900;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.nav:hover{background:var(--red);color:#fff}
+.prev{left:16px}.next{right:16px}
 
-footer{border-top:1px solid var(--line);padding:22px 16px;text-align:center;color:#5f6775;font-size:11.5px;letter-spacing:.09em}
-@media(max-width:560px){
-  .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
-  .nav{width:38px;height:52px}.lb{padding:52px 8px 60px}
-  .pdf{margin-left:0;width:100%}
+footer{background:var(--navy);color:#9fb0c8;text-align:center;padding:26px 16px;font-size:13px}
+footer b{color:#fff}footer span{color:var(--gold)}
+.totop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:none;background:var(--red);
+  color:#fff;font-size:20px;box-shadow:0 8px 22px rgba(225,29,72,.4);opacity:0;pointer-events:none;transition:.2s;z-index:55}
+.totop.on{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--red-d)}
+
+@media(max-width:640px){
+  .count-pill{display:none}
+  .bar{top:64px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:11px}
+  .info{padding:10px 11px 12px}.info b{font-size:13.5px}
+  .search{width:100%}
+  .nav{width:40px;height:40px}.prev{left:8px}.next{right:8px}
 }
 </style>
 </head>
 <body>
-<header>
-  <div class="bar">
-    <div class="brand">GIZMOSHUBB<small>UV PRINT CATALOG</small></div>
-    <div class="spacer"></div>
-    <input class="search" id="q" type="search" placeholder="Search design no&hellip;" autocomplete="off">
-  </div>
-  <div class="tabs" id="tabs">
-    <button class="tab on" data-k="ALL">ALL<span class="c" id="cALL"></span></button>
-    <button class="tab" data-k="X">PRINT X<span class="c" id="cX"></span></button>
-    <button class="tab" data-k="Y">PRINT Y<span class="c" id="cY"></span></button>
-    <button class="tab" data-k="Z">PRINT Z<span class="c" id="cZ"></span></button>
-    <div class="pdf">
-      <a href="../PRINT%20X.pdf" target="_blank">PDF &middot; X</a>
-      <a href="../PRINT%20Y.pdf" target="_blank">PDF &middot; Y</a>
-      <a href="../PRINT%20Z.pdf" target="_blank">PDF &middot; Z</a>
-    </div>
-  </div>
-</header>
 
-<main>
+<header class="top"><div class="in">
+  <a class="logo" href="#"><div class="mk">G</div><b>Gizmos<span>Hubb</span></b></a>
+  <div class="sp"></div>
+  <div class="count-pill">302 Designs</div>
+</div></header>
+
+<section class="hero">
+  <h1>Premium <em>UV Printing</em> Designs</h1>
+  <p>Unique, high-resolution designs ready for your UV printing business.<br>
+     Browse <b>302 designs</b> across three collections &mdash; tap any design to preview.</p>
+  <div class="stats">
+    <div class="stat"><b>302</b><span>Designs</span></div>
+    <div class="stat"><b>101</b><span>Collection X</span></div>
+    <div class="stat"><b>100</b><span>Collection Y</span></div>
+    <div class="stat"><b>101</b><span>Collection Z</span></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="sec"><i></i><h2 id="secTitle">All Designs</h2></div>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-k="ALL">All<small>302</small></button>
+      <button class="tab" data-k="X">Collection X<small>101</small></button>
+      <button class="tab" data-k="Y">Collection Y<small>100</small></button>
+      <button class="tab" data-k="Z">Collection Z<small>101</small></button>
+    </div>
+    <input class="search" id="q" type="search" placeholder="Search design no." autocomplete="off">
+  </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>No designs match that number.</div>
-</main>
-
-<div class="lb" id="lb">
-  <div class="lbtop">
-    <b id="lbName"></b><span class="cnt" id="lbCnt"></span>
-    <button class="x" id="lbX">&times;</button>
-  </div>
-  <button class="nav prev" id="lbP">&#10094;</button>
-  <img id="lbImg" alt="">
-  <button class="nav next" id="lbN">&#10095;</button>
-  <div class="hint">&larr; &rarr; to browse &middot; ESC to close</div>
 </div>
 
-<footer>GIZMOSHUBB &middot; ALL DESIGNS WATERMARKED &amp; COPYRIGHT PROTECTED</footer>
+<div class="lb" id="lb">
+  <div class="lbt"><b id="lbN"></b><span class="tag" id="lbT"></span><span class="c" id="lbC"></span><button class="x" id="lbX" aria-label="Close">&times;</button></div>
+  <button class="nav prev" id="lbP" aria-label="Previous">&#10094;</button>
+  <img id="lbI" alt="">
+  <button class="nav next" id="lbNx" aria-label="Next">&#10095;</button>
+</div>
 
-<script src="data.js"></script>
+<button class="totop" id="top" aria-label="Back to top">&uarr;</button>
+
+<footer><b>Gizmos<span>Hubb</span></b> &middot; Premium UV Printing Designs &middot; All designs copyright protected</footer>
+
 <script>
-const grid=document.getElementById('grid'), empty=document.getElementById('empty'),
-      q=document.getElementById('q'), lb=document.getElementById('lb'),
-      lbImg=document.getElementById('lbImg'), lbName=document.getElementById('lbName'),
-      lbCnt=document.getElementById('lbCnt');
-let all=[], view=[], tab='ALL', idx=-1;
-
-(function(){
-  const d=window.CATALOG;
-  if(!d){
-    empty.hidden=false;
-    empty.textContent='Could not load data.js — keep it next to this page.';
-    return;
-  }
-  for(const k of ['X','Y','Z']){
-    (d[k]||[]).forEach(o=>all.push({n:o.n,v:o.v,t:o.t,k:k}));
-    const el=document.getElementById('c'+k); if(el) el.textContent=(d[k]||[]).length;
-  }
-  document.getElementById('cALL').textContent=all.length;
-  render();
-})();
+var FILES=["X-01.jpg","X-02.jpg","X-03.jpg","X-04.jpg","X-05.jpg","X-06.jpg","X-07.jpg","X-08.jpg","X-09.jpg","X-10.jpg","X-11.jpg","X-12.jpg","X-13.jpg","X-14.jpg","X-15.jpg","X-16.jpg","X-17.jpg","X-18.jpg","X-19.jpg","X-20.jpg","X-21.jpg","X-22.jpg","X-23.jpg","X-24.jpg","X-25.jpg","X-26.jpg","X-27.jpg","X-28.jpg","X-29.jpg","X-30.jpg","X-31.jpg","X-32.jpg","X-33.jpg","X-34.jpg","X-35.jpg","X-36.jpg","X-37.jpg","X-38.jpg","X-39.jpg","X-40.jpg","X-41.jpg","X-42.jpg","X-43.jpg","X-44.jpg","X-45.jpg","X-46.jpg","X-47.jpg","X-48.jpg","X-49.jpg","X-50.jpg","X-51.jpg","X-52.jpg","X-53.jpg","X-54.jpg","X-55.jpg","X-56.jpg","X-57.jpg","X-58.jpg","X-59.jpg","X-60.jpg","X-61.jpg","X-62.jpg","X-63.jpg","X-64.jpg","X-65.jpg","X-66.jpg","X-67.jpg","X-68.jpg","X-69.jpg","X-70.jpg","X-71.jpg","X-72.jpg","X-73.jpg","X-74.jpg","X-75.jpg","X-76.jpg","X-77.jpg","X-78.jpg","X-79.jpg","X-80.jpg","X-81.jpg","X-82.jpg","X-83.jpg","X-84.jpg","X-85.jpg","X-86.jpg","X-87.jpg","X-88.jpg","X-89.jpg","X-90.jpg","X-91.jpg","X-92.jpg","X-93.jpg","X-94.jpg","X-95.jpg","X-96.jpg","X-97.jpg","X-98.jpg","X-99.jpg","X-100.jpg","X-101.jpg","Y-1.jpg","Y-2.jpg","Y-3.jpg","Y-4.jpg","Y-5.jpg","Y-6.jpg","Y-7.jpg","Y-8.jpg","Y-9.jpg","Y-10.jpg","Y-11.jpg","Y-12.jpg","Y-13.jpg","Y-14.jpg","Y-15.jpg","Y-16.jpg","Y-17.jpg","Y-18.jpg","Y-19.jpg","Y-20.jpg","Y-21.jpg","Y-22.jpg","Y-23.jpg","Y-24.jpg","Y-25.jpg","Y-26.jpg","Y-27.jpg","Y-28.jpg","Y-29.jpg","Y-30.jpg","Y-31.jpg","Y-32.jpg","Y-33.jpg","Y-34.jpg","Y-35.jpg","Y-36.jpg","Y-37.jpg","Y-38.jpg","Y-39.jpg","Y-40.jpg","Y-41.jpg","Y-42.jpg","Y-43.jpg","Y-44.jpg","Y-45.jpg","Y-46.jpg","Y-47.jpg","Y-48.jpg","Y-49.jpg","Y-50.jpg","Y-51.jpg","Y-52.jpg","Y-53.jpg","Y-54.jpg","Y-55.jpg","Y-56.jpg","Y-57.jpg","Y-58.jpg","Y-59.jpg","Y-60.jpg","Y-61.jpg","Y-62.jpg","Y-63.jpg","Y-64.jpg","Y-65.jpg","Y-66.jpg","Y-67.jpg","Y-68.jpg","Y-69.jpg","Y-70.jpg","Y-71.jpg","Y-72.jpg","Y-73.jpg","Y-74.jpg","Y-75.jpg","Y-76.jpg","Y-77.jpg","Y-78.jpg","Y-79.jpg","Y-80.jpg","Y-81.jpg","Y-82.jpg","Y-83.jpg","Y-84.jpg","Y-85.jpg","Y-86.jpg","Y-87.jpg","Y-88.jpg","Y-89.jpg","Y-90.jpg","Y-91.jpg","Y-92.jpg","Y-93.jpg","Y-94.jpg","Y-95.jpg","Y-96.jpg","Y-97.jpg","Y-98.jpg","Y-99.jpg","Y-100.jpg","Z-101.jpg","Z-102.jpg","Z-103.jpg","Z-104.jpg","Z-105.jpg","Z-106 a.jpg","Z-106.jpg","Z-107.jpg","Z-108.jpg","Z-109.jpg","Z-110.jpg","Z-111.jpg","Z-112.jpg","Z-113.jpg","Z-114.jpg","Z-115.jpg","Z-116.jpg","Z-117.jpg","Z-118.jpg","Z-119.jpg","Z-120.jpg","Z-121.jpg","Z-122.jpg","Z-123.jpg","Z-124.jpg","Z-125.jpg","Z-126.jpg","Z-127.jpg","Z-128.jpg","Z-129.jpg","Z-130.jpg","Z-131.jpg","Z-132.jpg","Z-133.jpg","Z-134.jpg","Z-135.jpg","Z-136.jpg","Z-137.jpg","Z-138.jpg","Z-139.jpg","Z-140.jpg","Z-141.jpg","Z-142.jpg","Z-143.jpg","Z-144.jpg","Z-145.jpg","Z-146.jpg","Z-147.jpg","Z-148.jpg","Z-149.jpg","Z-150.jpg","Z-151.jpg","Z-152.jpg","Z-153.jpg","Z-154.jpg","Z-155.jpg","Z-156.jpg","Z-157.jpg","Z-158.jpg","Z-159.jpg","Z-160.jpg","Z-161.jpg","Z-162.jpg","Z-163.jpg","Z-164.jpg","Z-165.jpg","Z-166.jpg","Z-167.jpg","Z-168.jpg","Z-169.jpg","Z-170.jpg","Z-171.jpg","Z-172.jpg","Z-173.jpg","Z-174.jpg","Z-175.jpg","Z-176.jpg","Z-177.jpg","Z-178.jpg","Z-179.jpg","Z-180.jpg","Z-181.jpg","Z-182.jpg","Z-183.jpg","Z-184.jpg","Z-185.jpg","Z-186.jpg","Z-187.jpg","Z-188.jpg","Z-189.jpg","Z-190.jpg","Z-191.jpg","Z-192.jpg","Z-193.jpg","Z-194.jpg","Z-195.jpg","Z-196.jpg","Z-197.jpg","Z-198.jpg","Z-199.jpg","Z-200.jpg"];
+var NAMES={X:'Collection X',Y:'Collection Y',Z:'Collection Z'};
+var all=FILES.map(function(f){
+  var k=f.charAt(0), n=f.slice(2).replace(/\.jpg$/i,'');
+  return {f:f,k:k,n:n};
+});
+var grid=document.getElementById('grid'),empty=document.getElementById('empty'),q=document.getElementById('q'),
+    lb=document.getElementById('lb'),lbI=document.getElementById('lbI'),view=[],tab='ALL',idx=-1;
 
 function render(){
-  const term=q.value.trim().toLowerCase();
-  view=all.filter(o=>(tab==='ALL'||o.k===tab)&&(!term||o.n.toLowerCase().includes(term)));
+  var t=q.value.trim().toLowerCase();
+  view=all.filter(function(o){return (tab==='ALL'||o.k===tab)&&(!t||o.n.toLowerCase().indexOf(t)>-1);});
   grid.innerHTML='';
-  const f=document.createDocumentFragment();
+  var fr=document.createDocumentFragment();
   view.forEach(function(o,i){
-    const c=document.createElement('div');
-    c.className='card'; c.dataset.i=i;
-    const ph=document.createElement('div'); ph.className='ph';
-    const im=document.createElement('img');
-    im.loading='lazy'; im.decoding='async'; im.src=o.t; im.alt='Design '+o.n;
+    var c=document.createElement('div');c.className='card';c.dataset.i=i;
+    var ph=document.createElement('div');ph.className='ph';
+    var im=document.createElement('img');im.loading='lazy';im.decoding='async';im.src='thumbs/'+o.f;im.alt='Design '+o.n;
     ph.appendChild(im);
-    const me=document.createElement('div'); me.className='meta';
-    const b=document.createElement('b'); b.textContent=o.n;
-    const s=document.createElement('span'); s.textContent='PRINT '+o.k;
-    me.appendChild(b); me.appendChild(s);
-    c.appendChild(ph); c.appendChild(me);
-    f.appendChild(c);
+    var inf=document.createElement('div');inf.className='info';
+    var b=document.createElement('b');b.textContent='Design #'+o.n;
+    var tg=document.createElement('span');tg.className='tag';tg.textContent=o.k;
+    inf.appendChild(b);inf.appendChild(tg);c.appendChild(ph);c.appendChild(inf);fr.appendChild(c);
   });
-  grid.appendChild(f);
+  grid.appendChild(fr);
   empty.hidden=view.length>0;
+  document.getElementById('secTitle').textContent=tab==='ALL'?'All Designs':NAMES[tab];
 }
-
 document.getElementById('tabs').addEventListener('click',function(e){
-  const b=e.target.closest('.tab'); if(!b) return;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  b.classList.add('on'); tab=b.dataset.k; render();
-  scrollTo({top:0,behavior:'smooth'});
+  var b=e.target.closest('.tab');if(!b)return;
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});
+  b.classList.add('on');tab=b.dataset.k;render();
+  var y=grid.getBoundingClientRect().top+scrollY-150; if(scrollY>y) scrollTo({top:y,behavior:'smooth'});
 });
 q.addEventListener('input',render);
+grid.addEventListener('click',function(e){var c=e.target.closest('.card');if(c)openLb(+c.dataset.i);});
 
-grid.addEventListener('click',function(e){
-  const c=e.target.closest('.card'); if(c) open(+c.dataset.i);
-});
-function open(i){
-  if(i<0||i>=view.length) return;
-  idx=i; const o=view[i];
-  lbImg.src=o.v; lbImg.alt='Design '+o.n;
-  lbName.textContent=o.n+'  ·  PRINT '+o.k;
-  lbCnt.textContent=(i+1)+' / '+view.length;
-  lb.classList.add('on'); document.body.style.overflow='hidden';
+function openLb(i){
+  if(i<0||i>=view.length)return; idx=i; var o=view[i];
+  lbI.src=o.f; lbI.alt='Design '+o.n;
+  document.getElementById('lbN').textContent='Design #'+o.n;
+  document.getElementById('lbT').textContent=NAMES[o.k];
+  document.getElementById('lbC').textContent=(i+1)+' / '+view.length;
+  lb.classList.add('on');document.body.style.overflow='hidden';
+  [i+1,i-1].forEach(function(j){ if(view[j]){ var p=new Image(); p.src=view[j].f; } });
 }
-function close(){lb.classList.remove('on');lbImg.removeAttribute('src');document.body.style.overflow='';}
-function step(d){open((idx+d+view.length)%view.length);}
-document.getElementById('lbX').onclick=close;
+function closeLb(){lb.classList.remove('on');lbI.removeAttribute('src');document.body.style.overflow='';}
+function step(d){openLb((idx+d+view.length)%view.length);}
+document.getElementById('lbX').onclick=closeLb;
 document.getElementById('lbP').onclick=function(e){e.stopPropagation();step(-1);};
-document.getElementById('lbN').onclick=function(e){e.stopPropagation();step(1);};
-lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbImg)close();});
+document.getElementById('lbNx').onclick=function(e){e.stopPropagation();step(1);};
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
 addEventListener('keydown',function(e){
-  if(!lb.classList.contains('on')){
-    if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
-    return;
-  }
-  if(e.key==='Escape')close();
-  else if(e.key==='ArrowRight')step(1);
-  else if(e.key==='ArrowLeft')step(-1);
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1);
 });
-let sx=null;
+var sx=null;
 lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-lb.addEventListener('touchend',function(e){
-  if(sx===null)return;
-  const dx=e.changedTouches[0].clientX-sx;
-  if(Math.abs(dx)>50)step(dx<0?1:-1);
-  sx=null;
-},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)step(dx<0?1:-1);sx=null;},{passive:true});
+
+var tp=document.getElementById('top');
+addEventListener('scroll',function(){tp.classList.toggle('on',scrollY>700);},{passive:true});
+tp.onclick=function(){scrollTo({top:0,behavior:'smooth'});};
 document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
 document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+render();
 </script>
 </body>
 </html>
